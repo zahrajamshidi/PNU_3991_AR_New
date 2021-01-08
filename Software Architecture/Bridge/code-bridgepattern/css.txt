@@ -1,0 +1,138 @@
+@-webkit-keyframes television {
+  0% {
+    background: black;
+  }
+  10% {
+    background-image: url("http://s8.picofile.com/file/8344502734/giphy_14.gif");
+  }
+  99% {
+    background-image: url("http://s8.picofile.com/file/8344502734/giphy_14.gif");
+  }
+  100% {
+    background-image: url("http://s8.picofile.com/file/8344502734/giphy_14.gif");
+  }
+}
+@keyframes television {
+  0% {
+    background: black;
+  }
+  10% {
+    background-image: url("http://s8.picofile.com/file/8344502734/giphy_14.gif");
+  }
+  100% {
+    background-image: url("http://s8.picofile.com/file/8344502734/giphy_14.gif");
+  }
+ 
+}
+html {
+  cursor: none;
+  overflow: hidden;
+}
+
+.tv {
+  position: absolute;
+  right: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.tv.lg {
+  right:250px
+}
+.tv__name {
+  position:absolute;
+  bottom :-50px;
+  font-family:verdana;
+  font-weight:bold;
+  left:10px;
+} 
+.tv__antenna {
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin: 0 auto;
+}
+
+.tv__antenna-base {
+  width: 50px;
+  height: 5px;
+  border-radius: 5px 5px 0px 0px;
+  background: black;
+  margin: 0 auto;
+}
+
+.tv__box {
+  width: 200px;
+  height: 150px;
+  background: brown;
+  border-radius: 10px;
+}
+
+.tv__screen {
+  width: 175px;
+  height: 125px;
+  margin: 0 auto;
+  position: relative;
+  background: #aaa;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.tv__screen.on {
+  -webkit-animation: television 1.5s;
+          animation: television 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background-size: cover;
+}
+
+.tv__leg {
+  width: 5px;
+  height: 20px;
+  background: black;
+  position: absolute;
+  border-radius: 5px;
+}
+.tv__leg:first-child {
+  left: 40px;
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+}
+.tv__leg:last-child {
+  right: 40px;
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+}
+
+.remote {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+}
+
+.remote__case {
+  width: 50px;
+  height: 100px;
+  background: black;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.remote__power {
+  background: brown;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 10px;
+}
+.remote__power.on .fa-power-off {
+  color: white;
+}
+
+Resources

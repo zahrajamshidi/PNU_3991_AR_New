@@ -1,0 +1,74 @@
+class RemoteControl {
+  constructor (tv){
+    this.tv = tv
+  }
+  on(){ 
+    this.tv.on() 
+  }
+  off(){ 
+    this.tv.off() 
+  }
+}
+
+class SamsungTv  {
+  on(){ 
+    $('.tv.samsung .tv__screen').toggleClass('on');
+    $('.tv.samsung .tv__name').text('SAMSUNG TV IS ON')
+  }
+  off(){
+    $('.tv.samsung .tv__screen').toggleClass('on');
+    $('.tv.samsung .tv__name').text('SAMSUNG TV IS OFF')
+  }
+ 
+}
+
+class LgTv {
+  on(){ 
+    $('.tv.lg .tv__screen').toggleClass('on');
+    $('.tv.lg .tv__name').text('LG TV IS ON')
+  }
+  off(){
+    $('.tv.lg .tv__screen').toggleClass('on');
+    $('.tv.lg .tv__name').text('LG TV IS OFF')   
+  }
+}
+
+
+var samsung_control = new RemoteControl ( new SamsungTv() );
+var lg_control = new RemoteControl ( new LgTv() );
+
+
+
+
+/************************ TV ************************/
+
+// hijack cursor
+$('html').mousemove(function(e) {
+  $('.remote').css('left', e.pageX + 'px');
+  $('.remote').css('top', e.pageY + 'px');
+});
+
+
+$('.tv.samsung').click(function(e) { 
+  if (e.button == 0) {
+    if ($('.tv.samsung .tv__screen').hasClass('on')) {
+    samsung_control.off()
+  }
+  else {
+    samsung_control.on()
+  }
+  }
+});
+$('.tv.lg').click(function(e) { 
+  if (e.button == 0) {
+    if ($('.tv.lg .tv__screen').hasClass('on')) {
+    lg_control.off()
+  }
+  else {
+    lg_control.on()
+  }
+  }
+});
+
+
+Resources

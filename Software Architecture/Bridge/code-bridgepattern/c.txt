@@ -1,0 +1,27 @@
+
+class RemoteControl {
+  constructor (tv){
+    this.tv = tv
+  }
+  on(){ 
+    tv.on() 
+  }
+  off(){ 
+    tv.off() 
+  }
+
+class Tv {
+  on(){}
+  off(){}
+}
+
+class SamsungTv extends Tv {
+  on(){ }
+  off(){ }
+
+}
+
+class LgTv extends Tv {
+  on(){ }
+  off(){ }
+}

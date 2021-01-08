@@ -1,0 +1,40 @@
+
+<div class="tv samsung">
+  <div class="tv__top">
+    <div class="tv__antenna"></div>
+    <div class="tv__antenna-base"></div>
+  </div>
+  <div class="tv__box">
+    <div class="tv__screen"></div>
+  </div>
+  <div class="tv__bottom">
+    <div class="tv__leg"></div>
+    <div class="tv__leg"></div>
+    
+  </div>
+  <div class="tv__name">SAMSUNG TV IS OFF</div>
+</div>
+<div class="tv lg">
+  <div class="tv__top">
+    <div class="tv__antenna"></div>
+    <div class="tv__antenna-base"></div>
+  </div>
+  <div class="tv__box">
+    <div class="tv__screen"></div>
+  </div>
+  <div class="tv__bottom">
+    <div class="tv__leg"></div>
+    <div class="tv__leg"></div>
+    
+  </div>
+  <div class="tv__name">LG TV IS OFF</div>
+</div>
+
+
+
+
+<div class="remote">
+  <div class="remote__case">
+    <div class="remote__power on" onclick="toggleOn()"><i class="fa fa-power-off"></i></div>
+  </div>
+</div>
